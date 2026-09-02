@@ -66,7 +66,7 @@ FOOT = """</main>
     <div class="footer-grid">
       <div>
         <p class="footer-brand">Hermes Roofing Co.</p>
-        <p class="footer-about">Family-owned, insured, and bonded. Roofing Austin and Central Texas since 2009 &mdash; repairs, replacements, and storm restoration done right.</p>
+        <p class="footer-about">Family-owned, insured, and bonded. Roofing Austin and Central Texas since 2009: repairs, replacements, and storm restoration done right.</p>
       </div>
       <div>
         <h3>Services</h3>
@@ -201,7 +201,7 @@ pages["storm-insurance.html"] = page(
     """
 <section class="page-hero">
   <div class="wrap">
-    <h1>Hail hit? We handle everything &mdash; including your insurance.</h1>
+    <h1>Hail hit? We handle everything, including your insurance.</h1>
     <p>Austin sits in Texas Hail Alley. We've restored storm-damaged roofs here for 17 years, and we sit across from the adjuster so you don't have to.</p>
     <p style="margin-top:18px"><a class="btn btn-solid" href="/contact">Start my storm inspection</a></p>
   </div>
@@ -231,7 +231,7 @@ pages["storm-insurance.html"] = page(
       <span class="work-icon" aria-hidden="true">&#128737;</span>
       <div>
         <h3>The kid-safe yard guarantee</h3>
-        <p>We sweep every lawn with a metal detector before we leave. Ninety minutes finding stray nails is normal for us &mdash; your kids play out there.</p>
+        <p>We sweep every lawn with a metal detector before we leave. Ninety minutes finding stray nails is normal for us. Your kids play out there.</p>
       </div>
     </div>
   </div>
@@ -326,7 +326,7 @@ pages["gallery.html"] = page(
 <section class="page-hero">
   <div class="wrap">
     <h1>Recent work across Central Texas</h1>
-    <p>A look at recent roofs by our crew. This gallery grows as jobs complete &mdash; check back, or ask us for references from your neighborhood.</p>
+    <p>A look at recent roofs by our crew. This gallery grows as jobs complete, so check back, or ask us for references from your neighborhood.</p>
   </div>
 </section>
 <section class="section">
@@ -347,7 +347,7 @@ pages["contact.html"] = page(
 <section class="page-hero">
   <div class="wrap">
     <h1>Get a free inspection</h1>
-    <p>Tell us about your roof and we'll call you back to schedule. The more detail the better &mdash; describe the issue you're having, then what you'd like to achieve.</p>
+    <p>Tell us about your roof and we'll call you back to schedule. The more detail the better: describe the issue you're having, then what you'd like to achieve.</p>
   </div>
 </section>
 <section class="section">
@@ -426,7 +426,7 @@ for slug, (city, blurb) in CITIES.items():
   <div class="wrap service-grid">
     <div class="service-card">
       <h2>Roofing services in {city}</h2>
-      <p>Roof repairs, full replacements, new construction, standing seam metal roofs, inspections, certifications, and preventive maintenance &mdash; all backed by our 2-year leak-free guarantee.</p>
+      <p>Roof repairs, full replacements, new construction, standing seam metal roofs, inspections, certifications, and preventive maintenance, all backed by our 2-year leak-free guarantee.</p>
     </div>
     <div class="service-card">
       <h2>Hail &amp; storm restoration</h2>
