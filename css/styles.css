@@ -316,3 +316,9 @@ form .btn { margin-top: 16px; }
   .footer-grid { grid-template-columns: 1fr; }
   .utility .hours { display: none; }
 }
+
+/* Green variant for the kid-safe yard guarantee */
+.guarantee-green { background: var(--green); border-color: var(--green); }
+.guarantee-green h3 { color: var(--cream); }
+.guarantee-green p { color: var(--green-pale); }
+.guarantee-green .work-icon { color: var(--green-soft); }
