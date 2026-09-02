@@ -32,13 +32,6 @@ HEAD = """<!DOCTYPE html>
 <script>document.documentElement.classList.add('js')</script>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="utility">
-  <div class="wrap">
-    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Insured &amp; bonded &middot; Free drone inspections</span>
-    <a href="tel:15125227310">(512) 522-7310</a>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">Hermes Roofing Co.</a>
@@ -51,6 +44,7 @@ HEAD = """<!DOCTYPE html>
       <a href="/#reviews">Reviews</a>
       <a href="/#faq">FAQ</a>
       <a href="/contact"{cur_contact}>Contact</a>
+      <a class="nav-phone" href="tel:15125227310">(512) 522-7310</a>
       <a class="btn btn-solid" href="/contact">Book my free inspection</a>
     </nav>
   </div>
