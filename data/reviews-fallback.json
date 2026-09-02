@@ -1,0 +1,43 @@
+{
+  "_readme": "SAFETY LOCK: These reviews will NOT render on the site until (1) approved is set to true AND (2) every review has verbatim:true. Only flip these after replacing every text/author below with word-for-word reviews copied from the company's Google or Nextdoor profiles. Publishing invented or edited testimonials is deceptive advertising (FTC).",
+  "approved": false,
+  "rating": 5.0,
+  "total": null,
+  "reviews": [
+    {
+      "verbatim": false,
+      "author": "PASTE REAL FIRST NAME + INITIAL",
+      "rating": 5,
+      "when": "",
+      "text": "PLACEHOLDER (metal detector / kid-safe yard story) - replace with the verbatim Nextdoor or Google review about the crew sweeping the yard with a metal detector."
+    },
+    {
+      "verbatim": false,
+      "author": "PASTE REAL FIRST NAME + INITIAL",
+      "rating": 5,
+      "when": "",
+      "text": "PLACEHOLDER (Peter) - replace with the verbatim review about working with Peter on a new roof (responsive, met commitments, exceeded expectations)."
+    },
+    {
+      "verbatim": false,
+      "author": "PASTE REAL FIRST NAME + INITIAL",
+      "rating": 5,
+      "when": "",
+      "text": "PLACEHOLDER (Landon) - replace with a verbatim review about Landon handling the insurance claim and keeping the client informed."
+    },
+    {
+      "verbatim": false,
+      "author": "PASTE REAL FIRST NAME + INITIAL",
+      "rating": 5,
+      "when": "",
+      "text": "PLACEHOLDER (repeat customer) - replace with the verbatim multi-year repeat customer review about the team's integrity and responsiveness."
+    },
+    {
+      "verbatim": false,
+      "author": "PASTE REAL FIRST NAME + INITIAL",
+      "rating": 5,
+      "when": "",
+      "text": "PLACEHOLDER (Corey) - replace with the verbatim review praising Corey as friendly, hardworking, and clean."
+    }
+  ]
+}
