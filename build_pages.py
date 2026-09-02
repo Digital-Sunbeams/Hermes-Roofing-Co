@@ -51,7 +51,7 @@ HEAD = """<!DOCTYPE html>
       <a href="/#reviews">Reviews</a>
       <a href="/#faq">FAQ</a>
       <a href="/contact"{cur_contact}>Contact</a>
-      <a class="btn btn-solid" href="/contact">Get a free inspection</a>
+      <a class="btn btn-solid" href="/contact">Book my free inspection</a>
     </nav>
   </div>
 </header>

@@ -35,6 +35,16 @@ Only do that after replacing every placeholder with **word-for-word reviews copi
 
 The form on `/contact` posts to Formspree. Create a free form at formspree.io and replace `YOUR_FORM_ID` in `contact.html` with your form's ID. Until then, the phone and email links work regardless.
 
+## Adding new photos (the ongoing workflow)
+
+As new project photos come in:
+1. Name each file `service-descriptor-city-tx.jpg` (e.g. `shingle-roof-replacement-round-rock-tx.jpg`). The filename is an SEO asset — spend ten seconds on it.
+2. Drop it in `images/` and run `python3 optimize_images.py` (creates the WebP variants and compresses oversized originals automatically).
+3. Add a `<figure>` block in `gallery.html` (copy an existing one; set filename, honest alt text, caption, and `data-tags` from: shingle, metal, aerial, crew).
+4. Commit and push — Vercel redeploys automatically.
+
+Priorities for new photos: replace the three stock action shots first (`metal-roof-installation-roofer-*`, `roofing-crew-installing-roof-deck-*`, `roofing-contractors-shingle-installation-*`), add the before/after pair for the storm slider, get one photo per service-area city for the city pages, and crew headshots for the bio cards.
+
 ## Swapping in real photos
 
 All images live in `/images` with SEO-descriptive filenames (service + location). To swap a photo, replace the file but **keep the filename**, or use a new descriptive name in the same pattern (`service-detail-city-tx.jpg`) and update the reference. Every `<img>` has matching alt text — update it if the subject changes. Add new gallery photos in `gallery.html` (and optionally the homepage grid).

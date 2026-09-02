@@ -93,6 +93,8 @@ h3 { font-size: 1.25rem; }
 .nav a:hover { color: var(--green); }
 .nav a[aria-current="page"] { color: var(--green); font-weight: 600; }
 .nav .btn { padding: 10px 16px; }
+.nav a.btn-solid { color: var(--cream); }
+.nav a.btn-solid:hover { color: var(--cream); }
 .nav-toggle {
   display: none; background: none; border: 1.5px solid var(--line); border-radius: 8px;
   padding: 8px 12px; font-size: 1.1rem; color: var(--green); cursor: pointer;
