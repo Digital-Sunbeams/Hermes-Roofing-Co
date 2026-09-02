@@ -1,3 +1,5 @@
+function toArr(list) { return Array.prototype.slice.call(list); }
+
 /* Hermes Roofing Company — nav + live Google reviews */
 
 (function () {
@@ -28,6 +30,8 @@
   var ratingLine = document.getElementById('rating-line');
   var note = document.getElementById('reviews-note');
   if (!featuredSlot || !grid) return;
+
+  if (typeof fetch === 'undefined') return;
 
   var CREW = ['Peter', 'Landon', 'Jesse', 'Corey', 'Lindsay'];
 
@@ -122,4 +126,113 @@
       tryFallback();
     })
     .catch(tryFallback);
+})();
+
+/* ---------- Modernization: motion, counters, header, slider, filters ---------- */
+
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveals
+  var revealEls = toArr(document.querySelectorAll('.reveal'));
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  // Stat counters
+  var nums = toArr(document.querySelectorAll('.stat .num[data-count]'));
+  function animate(el) {
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduced) { el.textContent = target.toFixed(dec) + suffix; return; }
+    el.textContent = (0).toFixed(dec) + suffix;
+    var start = null, dur = 1100;
+    function tick(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(dec) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toFixed(dec) + suffix;
+    }
+    requestAnimationFrame(tick);
+  }
+  if (nums.length) {
+    if (reduced || !('IntersectionObserver' in window)) {
+      nums.forEach(animate);
+    } else {
+      var nio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { animate(e.target); nio.unobserve(e.target); }
+        });
+      }, { threshold: 0.5 });
+      nums.forEach(function (el) { nio.observe(el); });
+    }
+  }
+
+  // Header shadow on scroll
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Before/after slider: only reveals when both real photos exist
+  var section = document.getElementById('before-after');
+  var slider = document.getElementById('ba');
+  if (section && slider) {
+    var imgs = toArr(slider.querySelectorAll('img'));
+    var loaded = 0, failed = false;
+    imgs.forEach(function (img) {
+      var probe = new Image();
+      probe.onload = function () { loaded++; if (loaded === imgs.length && !failed) initSlider(); };
+      probe.onerror = function () { failed = true; };
+      probe.src = img.src;
+    });
+    function initSlider() {
+      section.hidden = false;
+      var after = slider.querySelector('.ba-after');
+      var handle = slider.querySelector('.ba-handle');
+      function setPos(pct) {
+        pct = Math.max(4, Math.min(96, pct));
+        after.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
+        handle.style.left = pct + '%';
+      }
+      setPos(50);
+      var dragging = false;
+      function move(clientX) {
+        var r = slider.getBoundingClientRect();
+        setPos(((clientX - r.left) / r.width) * 100);
+      }
+      slider.addEventListener('pointerdown', function (e) { dragging = true; move(e.clientX); });
+      window.addEventListener('pointermove', function (e) { if (dragging) move(e.clientX); });
+      window.addEventListener('pointerup', function () { dragging = false; });
+    }
+  }
+
+  // Gallery filters
+  var grid = document.getElementById('gallery-grid');
+  var btns = toArr(document.querySelectorAll('.filter-btn'));
+  if (grid && btns.length) {
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btns.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+        btn.setAttribute('aria-pressed', 'true');
+        var f = btn.getAttribute('data-filter');
+        toArr(grid.querySelectorAll('figure')).forEach(function (fig) {
+          var tags = fig.getAttribute('data-tags') || '';
+          fig.style.display = (f === 'all' || tags.indexOf(f) !== -1) ? '' : 'none';
+        });
+      });
+    });
+  }
 })();

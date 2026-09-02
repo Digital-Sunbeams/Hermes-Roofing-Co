@@ -65,6 +65,25 @@ js/main.js              Nav, reviews rendering
 sitemap.xml, robots.txt, favicon.svg, vercel.json
 ```
 
+## Drone inspections
+
+The site advertises free drone roof inspections. Confirm the crew actually offers drone-documented inspections before launch (they already produce drone photography, so this may just mean formalizing it). If not yet, search-replace "drone " out of the copy until it's real — never advertise a service that isn't offered.
+
+## Insured & bonded claim
+
+The site states the company is insured and bonded (carried over from the old website). Confirm current liability insurance and bond certificates before launch, and keep copies on hand — customers may ask, and the FAQ promises certificates with estimates.
+
+## Before/after slider
+
+The storm page includes a draggable before/after slider that stays hidden until BOTH of these files exist (same roof, similar angle, landscape):
+- `images/before-hail-damage-roof-austin-tx.jpg`
+- `images/after-roof-replacement-austin-tx.jpg`
+Drop the real pair in with those exact names and the slider appears automatically. Add matching `.webp` variants for performance if desired (optional).
+
+## Responsive images
+
+Each `.jpg` has `.webp` and `-480.webp` variants used via `<picture>` on the homepage and gallery. When swapping a photo, regenerate its variants (any converter, or Pillow: quality ~80 full size, ~78 at 640px wide).
+
 ## Pre-launch checklist
 
 - [ ] Set `GOOGLE_PLACES_API_KEY` and `GOOGLE_PLACE_ID` in Vercel (or fill + unlock the fallback file with verbatim reviews)

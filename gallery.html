@@ -18,11 +18,12 @@
 
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <div class="utility">
   <div class="wrap">
-    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Free inspections</span>
+    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Insured &amp; bonded &middot; Free drone inspections</span>
     <a href="tel:15125227310">(512) 522-7310</a>
   </div>
 </div>
@@ -53,25 +54,34 @@
   </div>
 </section>
 <section class="section">
-  <div class="wrap gallery-page-grid">
-<figure><img src="/images/completed-roof-replacement-drone-austin-tx.jpg" alt="Completed shingle roof replacement, drone view" loading="lazy"><figcaption>Roof replacement &middot; Austin, TX</figcaption></figure>
-<figure><img src="/images/roof-replacement-stone-home-austin-tx.jpg" alt="New shingle roof on a two-story stone home" loading="lazy"><figcaption>Roof replacement &middot; Austin, TX</figcaption></figure>
-<figure><img src="/images/architectural-shingle-roof-dormers-central-texas.jpg" alt="Architectural shingle roof with three dormers" loading="lazy"><figcaption>Shingle roofing &middot; Central Texas</figcaption></figure>
-<figure><img src="/images/new-shingle-roof-two-story-home-central-texas.jpg" alt="New shingle roof on a gray two-story home" loading="lazy"><figcaption>Roof replacement &middot; Central Texas</figcaption></figure>
-<figure><img src="/images/metal-tile-roof-detail-austin-tx.jpg" alt="Metal tile roof detail with brick chimney" loading="lazy"><figcaption>Metal roofing &middot; Austin, TX</figcaption></figure>
-<figure><img src="/images/composition-shingle-roof-aerial-central-texas.jpg" alt="Composition shingle roof, aerial view" loading="lazy"><figcaption>Roof replacement &middot; Central Texas</figcaption></figure>
-<figure><img src="/images/roof-inspection-aerial-view-austin-tx.jpg" alt="Aerial view of a roof inspection" loading="lazy"><figcaption>Roof inspection &middot; Austin, TX</figcaption></figure>
-<figure><img src="/images/metal-roof-installation-roofer-austin-tx.jpg" alt="Roofer installing a metal roof panel" loading="lazy"><figcaption>Metal roofing &middot; Austin, TX</figcaption></figure>
-<figure><img src="/images/roofing-crew-installing-roof-deck-central-texas.jpg" alt="Crew installing roof decking at sunset" loading="lazy"><figcaption>New roof construction &middot; Central Texas</figcaption></figure>
-<figure><img src="/images/roofing-contractors-shingle-installation-austin-tx.jpg" alt="Roofers installing shingles over new decking" loading="lazy"><figcaption>Shingle installation &middot; Austin, TX</figcaption></figure>
+  <div class="wrap">
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter-btn" aria-pressed="true" data-filter="all">All</button>
+      <button class="filter-btn" aria-pressed="false" data-filter="shingle">Shingle</button>
+      <button class="filter-btn" aria-pressed="false" data-filter="metal">Metal</button>
+      <button class="filter-btn" aria-pressed="false" data-filter="aerial">Aerial</button>
+      <button class="filter-btn" aria-pressed="false" data-filter="crew">Crew at work</button>
+    </div>
+  </div>
+  <div class="wrap gallery-page-grid" id="gallery-grid">
+<figure data-tags="shingle aerial"><picture><source type="image/webp" srcset="/images/completed-roof-replacement-drone-austin-tx-480.webp 640w, /images/completed-roof-replacement-drone-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/completed-roof-replacement-drone-austin-tx.jpg" alt="Completed shingle roof replacement, drone view" loading="lazy"></picture><figcaption>Roof replacement &middot; Austin, TX</figcaption></figure>
+<figure data-tags="shingle"><picture><source type="image/webp" srcset="/images/roof-replacement-stone-home-austin-tx-480.webp 640w, /images/roof-replacement-stone-home-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/roof-replacement-stone-home-austin-tx.jpg" alt="New shingle roof on a two-story stone home" loading="lazy"></picture><figcaption>Roof replacement &middot; Austin, TX</figcaption></figure>
+<figure data-tags="shingle"><picture><source type="image/webp" srcset="/images/architectural-shingle-roof-dormers-central-texas-480.webp 640w, /images/architectural-shingle-roof-dormers-central-texas.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/architectural-shingle-roof-dormers-central-texas.jpg" alt="Architectural shingle roof with three dormers" loading="lazy"></picture><figcaption>Shingle roofing &middot; Central Texas</figcaption></figure>
+<figure data-tags="shingle"><picture><source type="image/webp" srcset="/images/new-shingle-roof-two-story-home-central-texas-480.webp 640w, /images/new-shingle-roof-two-story-home-central-texas.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/new-shingle-roof-two-story-home-central-texas.jpg" alt="New shingle roof on a gray two-story home" loading="lazy"></picture><figcaption>Roof replacement &middot; Central Texas</figcaption></figure>
+<figure data-tags="metal"><picture><source type="image/webp" srcset="/images/metal-tile-roof-detail-austin-tx-480.webp 640w, /images/metal-tile-roof-detail-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/metal-tile-roof-detail-austin-tx.jpg" alt="Metal tile roof detail with brick chimney" loading="lazy"></picture><figcaption>Metal roofing &middot; Austin, TX</figcaption></figure>
+<figure data-tags="shingle aerial"><picture><source type="image/webp" srcset="/images/composition-shingle-roof-aerial-central-texas-480.webp 640w, /images/composition-shingle-roof-aerial-central-texas.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/composition-shingle-roof-aerial-central-texas.jpg" alt="Composition shingle roof, aerial view" loading="lazy"></picture><figcaption>Roof replacement &middot; Central Texas</figcaption></figure>
+<figure data-tags="aerial"><picture><source type="image/webp" srcset="/images/roof-inspection-aerial-view-austin-tx-480.webp 640w, /images/roof-inspection-aerial-view-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/roof-inspection-aerial-view-austin-tx.jpg" alt="Aerial view of a roof inspection" loading="lazy"></picture><figcaption>Roof inspection &middot; Austin, TX</figcaption></figure>
+<figure data-tags="metal crew"><picture><source type="image/webp" srcset="/images/metal-roof-installation-roofer-austin-tx-480.webp 640w, /images/metal-roof-installation-roofer-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/metal-roof-installation-roofer-austin-tx.jpg" alt="Roofer installing a metal roof panel" loading="lazy"></picture><figcaption>Metal roofing &middot; Austin, TX</figcaption></figure>
+<figure data-tags="crew"><picture><source type="image/webp" srcset="/images/roofing-crew-installing-roof-deck-central-texas-480.webp 640w, /images/roofing-crew-installing-roof-deck-central-texas.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/roofing-crew-installing-roof-deck-central-texas.jpg" alt="Crew installing roof decking at sunset" loading="lazy"></picture><figcaption>New roof construction &middot; Central Texas</figcaption></figure>
+<figure data-tags="shingle crew"><picture><source type="image/webp" srcset="/images/roofing-contractors-shingle-installation-austin-tx-480.webp 640w, /images/roofing-contractors-shingle-installation-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/roofing-contractors-shingle-installation-austin-tx.jpg" alt="Roofers installing shingles over new decking" loading="lazy"></picture><figcaption>Shingle installation &middot; Austin, TX</figcaption></figure>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="cta-band">
-      <h2>Ready for an honest look at your roof?</h2>
-      <p>Free inspection, clear recommendation, no pressure either way.</p>
+      <h2>Your roof could be next in this gallery</h2>
+      <p>Free drone inspection, and most installs finished in a single day.</p>
       <a class="btn btn-cream" href="/contact">Get a free inspection</a>
     </div>
   </div>
@@ -83,7 +93,7 @@
     <div class="footer-grid">
       <div>
         <p class="footer-brand">Hermes Roofing Co.</p>
-        <p class="footer-about">Family-owned roofing for Austin and Central Texas since 2009. Repairs, replacements, and storm restoration done right.</p>
+        <p class="footer-about">Family-owned, insured, and bonded. Roofing Austin and Central Texas since 2009 &mdash; repairs, replacements, and storm restoration done right.</p>
       </div>
       <div>
         <h3>Services</h3>

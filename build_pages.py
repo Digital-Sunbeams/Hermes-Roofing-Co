@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """One-time generator for Hermes Roofing secondary pages.
+WARNING: several generated pages have since been edited directly (green guarantee,
+action images, drone copy). Sync those edits into this script before regenerating.
 Run: python3 build_pages.py  (outputs static HTML into the repo; commit the results).
 """
 
@@ -27,11 +29,12 @@ HEAD = """<!DOCTYPE html>
 {extra_head}
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <div class="utility">
   <div class="wrap">
-    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Free inspections</span>
+    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Insured &amp; bonded &middot; Free drone inspections</span>
     <a href="tel:15125227310">(512) 522-7310</a>
   </div>
 </div>
@@ -63,7 +66,7 @@ FOOT = """</main>
     <div class="footer-grid">
       <div>
         <p class="footer-brand">Hermes Roofing Co.</p>
-        <p class="footer-about">Family-owned roofing for Austin and Central Texas since 2009. Repairs, replacements, and storm restoration done right.</p>
+        <p class="footer-about">Family-owned, insured, and bonded. Roofing Austin and Central Texas since 2009 &mdash; repairs, replacements, and storm restoration done right.</p>
       </div>
       <div>
         <h3>Services</h3>
@@ -174,7 +177,7 @@ pages["services.html"] = page(
     </div>
     <div class="service-card" id="inspections">
       <h2>Roof inspections</h2>
-      <p>Free, honest inspections that document your roof's condition with photos and give you a straightforward recommendation.</p>
+      <p>Free, honest drone inspections that document your roof's condition from every angle and give you a straightforward recommendation.</p>
     </div>
     <div class="service-card" id="certifications">
       <h2>Roof certifications</h2>
@@ -220,7 +223,7 @@ pages["storm-insurance.html"] = page(
       </div>
     </div>
     <div class="steps">
-      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>We inspect</h3><p>Free hail and storm assessment with photo documentation of every issue we find.</p></div></div>
+      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>We inspect</h3><p>Free drone hail assessment with photo documentation of every issue we find.</p></div></div>
       <div class="step"><span class="step-num" aria-hidden="true">2</span><div><h3>We handle the claim</h3><p>We meet your insurance adjuster on site and manage the paperwork end to end.</p></div></div>
       <div class="step"><span class="step-num" aria-hidden="true">3</span><div><h3>We restore</h3><p>Most roofs are completed in one day, guaranteed leak-free, with the yard swept clean.</p></div></div>
     </div>
@@ -431,11 +434,11 @@ for slug, (city, blurb) in CITIES.items():
     </div>
     <div class="service-card">
       <h2>Why {city} homeowners choose us</h2>
-      <p>Family-owned since 2009, A+ BBB accredited, and 5-star rated. A local crew you can reach by phone, not a storm chaser passing through.</p>
+      <p>Family-owned since 2009, insured and bonded, A+ BBB accredited, and 5-star rated. A local crew you can reach by phone, not a storm chaser passing through.</p>
     </div>
     <div class="service-card">
-      <h2>Free inspections</h2>
-      <p>An honest look at your roof's condition and a clear recommendation, with no pressure either way. <a href="/contact">Schedule yours</a> or call <a href="tel:15125227310">(512) 522-7310</a>.</p>
+      <h2>Free drone inspections</h2>
+      <p>An honest drone-documented look at your roof's condition and a clear recommendation, with no pressure either way. <a href="/contact">Schedule yours</a> or call <a href="tel:15125227310">(512) 522-7310</a>.</p>
     </div>
   </div>
 </section>

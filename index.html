@@ -55,20 +55,22 @@
   "mainEntity": [
     {"@type":"Question","name":"How fast can you get to my roof after a storm?","acceptedAnswer":{"@type":"Answer","text":"We prioritize urgent storm damage and can usually provide an inspection and emergency service within 24 to 48 hours after a storm."}},
     {"@type":"Question","name":"Do you help with insurance claims?","acceptedAnswer":{"@type":"Answer","text":"Yes. We document the damage, meet your adjuster on site, and guide you through the claims process so your repairs or replacement are covered whenever possible."}},
-    {"@type":"Question","name":"How do I know if I need a repair or a full replacement?","acceptedAnswer":{"@type":"Answer","text":"Our free inspection assesses your roof's condition and gives you an honest recommendation based on damage, age, and safety, with no pressure either way."}},
+    {"@type":"Question","name":"How do I know if I need a repair or a full replacement?","acceptedAnswer":{"@type":"Answer","text":"Our free drone inspection documents your roof's condition from every angle and gives you an honest recommendation based on damage, age, and safety, with no pressure either way."}},
     {"@type":"Question","name":"What roofing materials do you work with?","acceptedAnswer":{"@type":"Answer","text":"Composition and architectural shingles, standing seam and other metal roofs, wood shingle and shake, and commercial systems including TPO, EPDM, and modified bitumen."}},
     {"@type":"Question","name":"Is your work guaranteed?","acceptedAnswer":{"@type":"Answer","text":"Every repair is guaranteed leak-free for a minimum of 2 years. If a repaired area leaks during that period, we come back and fix it at no charge, normally within 48 hours."}},
+    {"@type":"Question","name":"Are you insured and bonded?","acceptedAnswer":{"@type":"Answer","text":"Yes. Hermes Roofing is insured and bonded, and we're happy to provide current certificates with your estimate."}},
     {"@type":"Question","name":"Are you local to Austin?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are family-owned, based in East Austin, and have served Central Texas since 2009. We are not a storm chaser."}}
   ]
 }
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <div class="utility">
   <div class="wrap">
-    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Free inspections</span>
+    <span class="hours">Mon&ndash;Sat 7am&ndash;5pm &middot; Insured &amp; bonded &middot; Free drone inspections</span>
     <a href="tel:15125227310">(512) 522-7310</a>
   </div>
 </div>
@@ -92,20 +94,45 @@
 
 <main id="main">
 
-<section class="hero">
-  <div class="hero-media">
+<section class="hero-full">
+  <picture>
+    <source type="image/webp" srcset="/images/completed-roof-replacement-drone-austin-tx-480.webp 640w, /images/completed-roof-replacement-drone-austin-tx.webp 1600w" sizes="100vw">
     <img src="/images/completed-roof-replacement-drone-austin-tx.jpg" alt="Drone view of a completed shingle roof replacement on a stone home in Austin, Texas" fetchpriority="high">
-    <div class="hero-card">
-      <span class="badge"><span class="star">&#9733;</span> 5.0 rated &middot; family-owned since 2009</span>
-      <h1>Seventeen years of building roofs. Every one done right.</h1>
-      <p>A crew your neighbors know by name, and a 2-year leak-free guarantee on every job.</p>
-      <div class="hero-actions">
-        <a class="btn btn-solid" href="/contact">Get a free inspection</a>
-        <a class="btn btn-outline" href="/gallery">See our work</a>
-      </div>
+  </picture>
+  <div class="hero-seal reveal"><svg class="seal" viewBox="0 0 100 100" width="92" height="92" aria-hidden="true" style="color:#FAF6ED">
+  <circle cx="50" cy="50" r="47" stroke-width="2"/>
+  <circle cx="50" cy="50" r="39" stroke-width="1"/>
+  <path id="sealArc" d="M 50 50 m -33 0 a 33 33 0 1 1 66 0 a 33 33 0 1 1 -66 0" fill="none"/>
+  <text font-size="10.5"><textPath href="#sealArc" startOffset="6%">FAMILY OWNED &#183; AUSTIN TX &#183; HERMES ROOFING &#183;</textPath></text>
+  <text x="50" y="47" text-anchor="middle" font-size="12">EST.</text>
+  <text x="50" y="62" text-anchor="middle" font-size="15">2009</text>
+</svg></div>
+  <div class="hero-inner">
+    <div class="hero-badges reveal">
+      <span class="hero-badge"><span class="star">&#9733;</span> 5.0 on Google</span>
+      <span class="hero-badge">Family-owned since 2009</span>
+      <span class="hero-badge">Free drone inspections</span>
+    </div>
+    <h1 class="reveal">Seventeen years of building roofs. Every one done right.</h1>
+    <p class="hero-sub reveal">Free drone roof inspections, a crew your neighbors know by name, and a 2-year leak-free guarantee on every job.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-cream" href="/contact">Get a free inspection</a>
+      <a class="btn btn-ghost" href="/gallery">See our work</a>
     </div>
   </div>
 </section>
+
+<div class="wrap">
+  <div class="stats-strip reveal">
+    <div class="stat"><div class="num" data-count="17">17</div><div class="lbl">years in Central Texas</div></div>
+    <div class="stat-div"></div>
+    <div class="stat"><div class="num" data-count="5.0" data-dec="1">5.0</div><div class="lbl">Google rating</div></div>
+    <div class="stat-div"></div>
+    <div class="stat"><div class="num">A+</div><div class="lbl">BBB accredited</div></div>
+    <div class="stat-div"></div>
+    <div class="stat"><div class="num" data-count="2" data-suffix="-yr">2-yr</div><div class="lbl">leak-free guarantee</div></div>
+  </div>
+</div>
 
 <section class="areas" aria-label="Service areas">
   <div class="wrap">
@@ -120,7 +147,7 @@
   </div>
 </section>
 
-<section class="section reviews-band" id="reviews">
+<section class="section reviews-band reveal" id="reviews">
   <div class="wrap">
     <div class="reviews-head">
       <span class="gbadge">
@@ -140,7 +167,9 @@
   </div>
 </section>
 
-<section class="section" id="crew">
+
+<div class="section-rule" aria-hidden="true"><span>&#9670;</span></div>
+<section class="section reveal" id="crew">
   <div class="wrap">
     <div class="section-head">
       <h2>The crew on your roof</h2>
@@ -155,26 +184,30 @@
   </div>
 </section>
 
-<section class="section" id="work">
+
+<div class="section-rule" aria-hidden="true"><span>&#9670;</span></div>
+<section class="section reveal" id="work">
   <div class="wrap">
     <div class="section-head">
       <h2>Recent work across Central Texas</h2>
       <a class="section-link" href="/gallery">Full gallery</a>
     </div>
     <div class="gallery-grid">
-      <a href="/gallery"><img src="/images/completed-roof-replacement-drone-austin-tx.jpg" alt="Completed shingle roof replacement, drone view, Austin TX" loading="lazy"></a>
-      <a href="/gallery"><img src="/images/metal-tile-roof-detail-austin-tx.jpg" alt="Metal tile roof detail with brick chimney, Austin TX" loading="lazy"></a>
-      <a href="/gallery"><img src="/images/architectural-shingle-roof-dormers-central-texas.jpg" alt="Architectural shingle roof with three dormers, Central Texas" loading="lazy"></a>
+      <a href="/gallery"><picture><source type="image/webp" srcset="/images/completed-roof-replacement-drone-austin-tx-480.webp 640w, /images/completed-roof-replacement-drone-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/completed-roof-replacement-drone-austin-tx.jpg" alt="Completed shingle roof replacement, drone view, Austin TX" loading="lazy"></picture><span class="tile-cap">Roof replacement &middot; Austin</span></a>
+      <a href="/gallery"><picture><source type="image/webp" srcset="/images/metal-tile-roof-detail-austin-tx-480.webp 640w, /images/metal-tile-roof-detail-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/metal-tile-roof-detail-austin-tx.jpg" alt="Metal tile roof detail with brick chimney, Austin TX" loading="lazy"></picture><span class="tile-cap">Metal roofing &middot; Austin</span></a>
+      <a href="/gallery"><picture><source type="image/webp" srcset="/images/architectural-shingle-roof-dormers-central-texas-480.webp 640w, /images/architectural-shingle-roof-dormers-central-texas.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/architectural-shingle-roof-dormers-central-texas.jpg" alt="Architectural shingle roof with three dormers, Central Texas" loading="lazy"></picture><span class="tile-cap">Shingle roofing &middot; Central Texas</span></a>
     </div>
     <div class="gallery-grid alt">
-      <a href="/gallery"><img src="/images/roof-replacement-stone-home-austin-tx.jpg" alt="New shingle roof on a two-story stone home, Austin TX" loading="lazy"></a>
-      <a href="/gallery"><img src="/images/metal-roof-installation-roofer-austin-tx.jpg" alt="Roofer fastening a metal roof panel, Austin TX" loading="lazy"></a>
-      <a href="/gallery"><img src="/images/roofing-crew-installing-roof-deck-central-texas.jpg" alt="Crew installing roof decking at sunset, Central Texas" loading="lazy"></a>
+      <a href="/gallery"><picture><source type="image/webp" srcset="/images/roof-replacement-stone-home-austin-tx-480.webp 640w, /images/roof-replacement-stone-home-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/roof-replacement-stone-home-austin-tx.jpg" alt="New shingle roof on a two-story stone home, Austin TX" loading="lazy"></picture><span class="tile-cap">Roof replacement &middot; Austin</span></a>
+      <a href="/gallery"><picture><source type="image/webp" srcset="/images/metal-roof-installation-roofer-austin-tx-480.webp 640w, /images/metal-roof-installation-roofer-austin-tx.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/metal-roof-installation-roofer-austin-tx.jpg" alt="Roofer fastening a metal roof panel, Austin TX" loading="lazy"></picture><span class="tile-cap">Metal install &middot; Austin</span></a>
+      <a href="/gallery"><picture><source type="image/webp" srcset="/images/roofing-crew-installing-roof-deck-central-texas-480.webp 640w, /images/roofing-crew-installing-roof-deck-central-texas.webp 1600w" sizes="(max-width: 640px) 100vw, 33vw"><img src="/images/roofing-crew-installing-roof-deck-central-texas.jpg" alt="Crew installing roof decking at sunset, Central Texas" loading="lazy"></picture><span class="tile-cap">Crew at work &middot; Central Texas</span></a>
     </div>
   </div>
 </section>
 
-<section class="section" id="how-we-work">
+
+<div class="section-rule" aria-hidden="true"><span>&#9670;</span></div>
+<section class="section reveal" id="how-we-work">
   <div class="wrap">
     <h2 style="margin-bottom:22px">How we work</h2>
     <div class="work-grid">
@@ -193,6 +226,11 @@
         <h3>We stand behind our work</h3>
         <p>Repairs are guaranteed leak-free for 2 years, with warranty visits normally within 48 hours.</p>
       </div>
+      <div class="work-card">
+        <span class="work-icon" aria-hidden="true">&#10022;</span>
+        <h3>Premium materials, installed right</h3>
+        <p>Manufacturer-grade shingles, metal, and underlayment chosen for Texas heat and hail.</p>
+      </div>
     </div>
     <div class="guarantee guarantee-green" id="guarantee">
       <span class="work-icon" aria-hidden="true">&#128737;</span>
@@ -204,7 +242,7 @@
   </div>
 </section>
 
-<section class="section faq" id="faq">
+<section class="section faq reveal" id="faq">
   <div class="wrap">
     <h2 style="margin-bottom:20px">Common questions</h2>
     <details>
@@ -217,7 +255,7 @@
     </details>
     <details>
       <summary>How do I know if I need a repair or a full replacement?</summary>
-      <p>Our free inspection assesses your roof's condition and gives you an honest recommendation based on damage, age, and safety, with no pressure either way.</p>
+      <p>Our free drone inspection documents your roof's condition from every angle and gives you an honest recommendation based on damage, age, and safety, with no pressure either way.</p>
     </details>
     <details>
       <summary>What roofing materials do you work with?</summary>
@@ -228,13 +266,19 @@
       <p>Every repair is guaranteed leak-free for a minimum of 2 years. If a repaired area leaks during that period, we come back and fix it at no charge, normally within 48 hours.</p>
     </details>
     <details>
+      <summary>Are you insured and bonded?</summary>
+      <p>Yes. Hermes Roofing is insured and bonded, and we're happy to provide current certificates with your estimate.</p>
+    </details>
+    <details>
       <summary>Are you local to Austin?</summary>
       <p>Yes. We are family-owned, based in East Austin, and have served Central Texas since 2009. We are not a storm chaser.</p>
     </details>
   </div>
 </section>
 
-<section class="section" id="storm">
+
+<div class="section-rule" aria-hidden="true"><span>&#9670;</span></div>
+<section class="section reveal" id="storm">
   <div class="wrap">
     <div class="storm">
       <div class="storm-copy">
@@ -247,11 +291,11 @@
         </div>
       </div>
       <div class="storm-media">
-        <img src="/images/roof-inspection-aerial-view-austin-tx.jpg" alt="Aerial view of a roof inspection after a storm in Austin, Texas" loading="lazy">
+        <picture><source type="image/webp" srcset="/images/roof-inspection-aerial-view-austin-tx-480.webp 640w, /images/roof-inspection-aerial-view-austin-tx.webp 1600w" sizes="(max-width: 900px) 100vw, 45vw"><img src="/images/roof-inspection-aerial-view-austin-tx.jpg" alt="Aerial view of a roof inspection after a storm in Austin, Texas" loading="lazy"></picture>
       </div>
     </div>
     <div class="steps">
-      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>We inspect</h3><p>Free assessment, photo documented.</p></div></div>
+      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>We inspect</h3><p>Free drone assessment, photo documented.</p></div></div>
       <div class="step"><span class="step-num" aria-hidden="true">2</span><div><h3>We handle the claim</h3><p>We meet your adjuster for you.</p></div></div>
       <div class="step"><span class="step-num" aria-hidden="true">3</span><div><h3>We restore</h3><p>Most roofs done in one day.</p></div></div>
     </div>
@@ -264,8 +308,15 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <p class="footer-brand">Hermes Roofing Co.</p>
-        <p class="footer-about">Family-owned roofing for Austin and Central Texas since 2009. Repairs, replacements, and storm restoration done right.</p>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;"><span style="color:var(--green); width:64px; height:64px; display:inline-block;"><svg class="seal" viewBox="0 0 100 100" width="64" height="64" aria-hidden="true" style="color:currentColor">
+  <circle cx="50" cy="50" r="47" stroke-width="2"/>
+  <circle cx="50" cy="50" r="39" stroke-width="1"/>
+  <path id="sealArcF" d="M 50 50 m -33 0 a 33 33 0 1 1 66 0 a 33 33 0 1 1 -66 0" fill="none"/>
+  <text font-size="10.5"><textPath href="#sealArcF" startOffset="6%">FAMILY OWNED &#183; AUSTIN TX &#183; HERMES ROOFING &#183;</textPath></text>
+  <text x="50" y="47" text-anchor="middle" font-size="12">EST.</text>
+  <text x="50" y="62" text-anchor="middle" font-size="15">2009</text>
+</svg></span><p class="footer-brand" style="margin:0">Hermes Roofing Co.</p></div>
+        <p class="footer-about">Family-owned, insured, and bonded. Roofing Austin and Central Texas since 2009 &mdash; repairs, replacements, and storm restoration done right.</p>
       </div>
       <div>
         <h3>Services</h3>
