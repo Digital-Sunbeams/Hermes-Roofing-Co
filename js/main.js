@@ -79,7 +79,6 @@ function toArr(list) { return Array.prototype.slice.call(list); }
 
     var rest = reviews.filter(function (r) { return r !== featured; });
     rest.sort(function (a, b) { return (mentionsCrew(b.text) ? 1 : 0) - (mentionsCrew(a.text) ? 1 : 0); });
-    rest = rest.slice(0, 4);
 
     featuredSlot.innerHTML =
       '<figure class="review-featured">' +
@@ -104,28 +103,43 @@ function toArr(list) { return Array.prototype.slice.call(list); }
     return true;
   }
 
-  function tryFallback() {
-    fetch('/data/reviews-fallback.json')
+  function getJSON(url) {
+    return fetch(url)
       .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (data) {
-        if (!data || data.approved !== true) return;
-        var allVerbatim = (data.reviews || []).every(function (r) { return r.verbatim === true; });
-        if (!allVerbatim) return;
-        render(data, 'Google review');
-      })
-      .catch(function () { /* section stays minimal */ });
+      .catch(function () { return null; });
   }
 
-  fetch('/api/reviews')
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (data) {
-      if (data && data.ok && render(data, 'Google review')) {
-        if (note) note.textContent = '';
-        return;
-      }
-      tryFallback();
-    })
-    .catch(tryFallback);
+  // Live Google reviews (max 5 from the API) merge with owner-approved verbatim
+  // reviews from the fallback file, deduplicated, and ALL of them render on the
+  // page in a stacked grid. Nothing is hidden behind a carousel.
+  getJSON('/api/reviews').then(function (api) {
+    getJSON('/data/reviews-fallback.json').then(function (fb) {
+      var apiOk = api && api.ok;
+      var fbOk = fb && fb.approved === true &&
+        (fb.reviews || []).length &&
+        (fb.reviews || []).every(function (r) { return r.verbatim === true; });
+
+      var list = [];
+      if (apiOk) list = list.concat(api.reviews || []);
+      if (fbOk) list = list.concat(fb.reviews || []);
+
+      var seen = {}, merged = [];
+      list.forEach(function (r) {
+        var key = String(r.text || '').toLowerCase().replace(/\s+/g, ' ').slice(0, 60);
+        if (!key || seen[key]) return;
+        seen[key] = 1;
+        merged.push(r);
+      });
+      if (!merged.length) return; // section stays minimal until real reviews exist
+
+      render({
+        reviews: merged,
+        rating: (apiOk && api.rating) || (fbOk && fb.rating) || null,
+        total: (apiOk && api.total) || (fbOk && fb.total) || null
+      }, 'Google review');
+      if (note) note.textContent = '';
+    });
+  });
 })();
 
 /* ---------- Modernization: motion, counters, header, slider, filters ---------- */

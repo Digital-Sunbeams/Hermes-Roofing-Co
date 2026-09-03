@@ -1,5 +1,5 @@
 {
-  "_readme": "SAFETY LOCK: These reviews will NOT render on the site until (1) approved is set to true AND (2) every review has verbatim:true. Only flip these after replacing every text/author below with word-for-word reviews copied from the company's Google or Nextdoor profiles. Publishing invented or edited testimonials is deceptive advertising (FTC).",
+  "_readme": "SAFETY LOCK: These reviews will NOT render until (1) approved is true AND (2) every review has verbatim:true. Replace every entry with word-for-word reviews copied from the company's real Google/Nextdoor profiles, and ADD AS MANY AS YOU LIKE (10-20 recommended) by copying the entry format. They merge with the live Google feed on the page and duplicates are removed automatically. Publishing invented or edited testimonials is deceptive advertising (FTC).",
   "approved": false,
   "rating": 5.0,
   "total": null,

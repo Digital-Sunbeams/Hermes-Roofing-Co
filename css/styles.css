@@ -416,3 +416,82 @@ form .btn { margin-top: 16px; }
   .stat { flex: 1 1 38%; }
   .stat-div { display: none; }
 }
+
+/* ============ Mobile-first pass ============ */
+
+/* Tablets & phones: split hero — photo banner + green panel (no text-over-photo) */
+@media (max-width: 900px) {
+  .hero-full { display: block; min-height: 0; }
+  .hero-full::before, .hero-full::after { display: none; }
+  .hero-full picture { position: relative; display: block; height: 44vh; min-height: 280px; max-height: 420px; }
+  .hero-full img { position: absolute; inset: 0; object-position: 60% 35%; }
+  .hero-inner { background: var(--green); padding: 26px 22px 30px; }
+  .hero-full h1 { max-width: none; }
+  .hero-full .hero-sub { color: var(--green-pale); }
+  .hero-badge { background: var(--green-mid); }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 38px 0; }
+  .section-head { margin-bottom: 16px; }
+
+  /* Hero panel typography & actions */
+  .hero-full h1 { font-size: 2.15rem; margin-bottom: 10px; }
+  .hero-full .hero-sub { font-size: 1.02rem; margin-bottom: 20px; }
+  .hero-badges { gap: 8px; margin-bottom: 14px; }
+  .hero-badge { font-size: 0.8rem; padding: 6px 12px; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-actions .btn { width: 100%; }
+  .hero-mark { width: 56px; height: 56px; margin-bottom: 12px; }
+
+  /* Stats: clean 2x2 */
+  .stats-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 12px; padding: 26px 0; }
+  .stat { flex: none; }
+  .stat-div { display: none; }
+
+  /* Service areas: one swipeable row */
+  .areas .wrap { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
+  .areas .wrap::-webkit-scrollbar { display: none; }
+  .areas-label, .chip { flex: 0 0 auto; }
+
+  /* Crew: compact 2x2 */
+  .crew-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .crew-card { padding: 16px 10px; }
+  .crew-avatar { width: 44px; height: 44px; font-size: 0.9rem; margin-bottom: 8px; }
+  .crew-card h3 { font-size: 1.05rem; }
+  .crew-card p { font-size: 0.85rem; }
+
+  /* Homepage gallery: swipeable snap carousel, single row */
+  .gallery-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .gallery-grid::-webkit-scrollbar { display: none; }
+  .gallery-grid a { flex: 0 0 82%; scroll-snap-align: start; }
+  .gallery-grid img { height: 235px; }
+  .gallery-grid.alt { display: none; }
+
+  /* Density & touch targets */
+  .work-card { padding: 16px; }
+  .guarantee { padding: 18px 16px; gap: 14px; }
+  .cta-band { padding: 28px 20px; }
+  .review-featured { padding: 20px 18px; }
+  .steps { gap: 10px; }
+  .step { padding: 13px 15px; }
+  .nav a { padding: 12px 4px; }
+  .faq summary { padding: 15px 16px; font-size: 1.02rem; }
+  .compare-table th, .compare-table td { padding: 10px 10px; font-size: 0.9rem; }
+  .timeline { padding-left: 22px; }
+  .page-hero { padding: 34px 0; }
+  .ba-slider img { height: 260px; }
+}
+
+/* Gallery carousel polish + denser mobile gallery page */
+@media (max-width: 640px) {
+  .gallery-grid { gap: 10px; scroll-padding-left: 22px; padding-bottom: 4px; }
+  .gallery-grid a { flex: 0 0 84%; border-radius: 12px; }
+  .gallery-grid a:last-child { margin-right: 10px; }
+  .gallery-grid img { height: 250px; }
+  .gallery-page-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery-page-grid img { height: 150px; }
+  .gallery-page-grid figcaption { padding: 7px 10px; font-size: 0.8rem; }
+  .review-grid { gap: 10px; }
+}
+.review-grid { align-items: start; }
