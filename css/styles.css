@@ -428,7 +428,8 @@ form .btn { margin-top: 16px; }
   .hero-full { display: block; min-height: 0; }
   .hero-full::before, .hero-full::after { display: none; }
   .hero-full picture { position: relative; display: block; height: 34vh; min-height: 230px; max-height: 340px; }
-  .hero-full img { position: absolute; inset: 0; object-position: 60% 48%; }
+  .hero-full img { position: absolute; inset: 0; object-position: 50% 42%; }
+  .hero-full picture::before, .hero-full picture::after { display: none; }
   .hero-inner { background: var(--green); padding: 24px 22px 28px; }
   .hero-tags { padding: 16px 22px; gap: 8px; background: var(--green); }
   .hero-badge { background: var(--green-mid); color: var(--green-pale); }
