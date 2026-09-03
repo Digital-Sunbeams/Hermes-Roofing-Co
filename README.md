@@ -27,7 +27,7 @@ Notes:
 
 ## Fallback reviews (before the API is configured)
 
-`data/reviews-fallback.json` can show hand-picked reviews when the API isn't set up. **It ships locked**: nothing renders until you set `"approved": true` AND mark every entry `"verbatim": true`.
+`data/reviews-fallback.json` holds hand-picked reviews that MERGE with the live Google feed (Google's API only returns 5, so this is how the page shows many). Add as many entries as you like; duplicates against the live feed are removed automatically. **It ships locked**: nothing renders until you set `"approved": true` AND mark every entry `"verbatim": true`.
 
 Only do that after replacing every placeholder with **word-for-word reviews copied from the company's real Google/Nextdoor profiles**, with real reviewer first names. Do not edit, improve, or invent review text — publishing fabricated or altered testimonials violates FTC rules and Google's policies.
 
