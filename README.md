@@ -75,9 +75,17 @@ js/main.js              Nav, reviews rendering
 sitemap.xml, robots.txt, favicon.svg, vercel.json
 ```
 
-## Drone inspections
+## 50-point inspections
 
-The site advertises free drone roof inspections. Confirm the crew actually offers drone-documented inspections before launch (they already produce drone photography, so this may just mean formalizing it). If not yet, search-replace "drone " out of the copy until it's real — never advertise a service that isn't offered.
+The site now leads with "free 50-point roof inspections" (hands-on, with drone imagery as supporting documentation). Make sure the crew has an actual 50-point checklist to match the claim; a printable checklist is also a great leave-behind for customers.
+
+## Booking page (/book)
+
+`/book` is the QR-code target for postcards. Create a free Calendly event type ("Free 50-Point Roof Inspection", 60 min), then in book.html replace YOUR_CALENDLY_URL with your Calendly link path. Point postcard QR codes at hermesroofing.com/book?utm_source=postcard so you can track scans in analytics.
+
+## Certification badges
+
+The homepage lists installer certifications (GAF, Owens Corning, CertainTeed, IKO, Atlas, Versico) as text chips. When certification badge images are available, save them to images/certs/ and swap the chips for logos in index.html.
 
 ## Insured & bonded claim
 
