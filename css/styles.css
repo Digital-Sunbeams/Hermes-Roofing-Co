@@ -333,6 +333,7 @@ form .btn { margin-top: 16px; }
 .hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
 .hero-badge { background: rgba(42,92,66,0.75); color: var(--green-pale); font-size: 0.86rem; font-weight: 600; padding: 7px 15px; border-radius: 99px; backdrop-filter: blur(4px); }
 .hero-badge .star { color: var(--gold); }
+.hero-badge.featured { background: var(--cream); color: var(--green); font-size: 1rem; font-weight: 700; padding: 9px 18px; }
 .hero-full h1 { color: var(--cream); max-width: 15ch; margin-bottom: 14px; font-size: clamp(2.4rem, 5vw, 3.7rem); letter-spacing: -0.01em; }
 .hero-full .hero-sub { color: #D8E2D8; font-size: 1.12rem; max-width: 46ch; margin-bottom: 24px; }
 .hero-full .btn-cream { border-color: var(--cream); }

@@ -43,8 +43,9 @@ HEAD = """<!DOCTYPE html>
       <a href="/gallery"{cur_gallery}>Work</a>
       <a href="/#reviews">Reviews</a>
       <a href="/#faq">FAQ</a>
+      <a href="/guides">Guides</a>
       <a href="/contact"{cur_contact}>Contact</a>
-      <a class="nav-phone" href="tel:15125227310">(512) 522-7310</a>
+      <a class="nav-phone" href="tel:15127778295">(512) 777-8295</a>
       <a class="btn btn-solid" href="/contact">Book my free inspection</a>
     </nav>
   </div>
@@ -76,7 +77,7 @@ FOOT = """</main>
       <div>
         <h3>Contact</h3>
         <ul>
-          <li><a href="tel:15125227310">(512) 522-7310</a></li>
+          <li><a href="tel:15127778295">(512) 777-8295</a></li>
           <li><a href="mailto:peter@hermesrenovations.com">peter@hermesrenovations.com</a></li>
           <li><a href="https://maps.app.goo.gl/3Mt3FMg3XMXFxuTL6" rel="noopener" target="_blank">701 Tillery St Ste 12, Austin, TX 78702</a></li>
           <li>Mon&ndash;Sat 7am&ndash;5pm</li>
@@ -94,10 +95,10 @@ FOOT = """</main>
   <div class="wrap">
     <div class="trust-item"><span class="big">A+</span><span class="small">BBB accredited</span></div>
     <div class="trust-item"><span class="big">5.0</span><span class="small">Google rating</span></div>
-    <div class="trust-item trust-summary"><span class="big">A+ BBB &middot; 5.0 &#9733; &middot; 17 yrs</span><span class="small">2-yr leak-free guarantee</span></div>
+    <div class="trust-item trust-summary"><span class="big">A+ BBB &middot; 5.0 &#9733; &middot; 17 yrs</span><span class="small">10-year warranty</span></div>
     <div class="trust-item"><span class="big">17 yrs</span><span class="small">in Central Texas</span></div>
-    <div class="trust-item"><span class="big">2-yr</span><span class="small">leak-free guarantee</span></div>
-    <a class="trust-call" href="tel:15125227310">Call now</a>
+    <div class="trust-item"><span class="big">10-yr</span><span class="small">warranty</span></div>
+    <a class="trust-call" href="tel:15127778295">Call now</a>
   </div>
 </div>
 
@@ -150,7 +151,7 @@ pages["services.html"] = page(
     <div class="service-card" id="residential">
       <h2>Residential roofing</h2>
       <p>Repairs, full replacements, and new roof construction for Central Texas homes, built with quality materials suited to our climate.</p>
-      <ul><li>Composition &amp; architectural shingles</li><li>Wood shingle &amp; shake</li><li>Impact-rated options for hail country</li></ul>
+      <ul><li>Architectural shingles</li><li>Class 3 and Class 4 hail and wind resistant options</li><li>Standing seam metal (our specialty)</li></ul>
     </div>
     <div class="service-card" id="commercial">
       <h2>Commercial roofing</h2>
@@ -159,11 +160,11 @@ pages["services.html"] = page(
     </div>
     <div class="service-card" id="replacement">
       <h2>Roof replacement</h2>
-      <p>A clear walkthrough of materials, cost, and warranty options, then a clean, efficient install. Most homes are completed in one day.</p>
+      <p>A clear walkthrough of materials, cost, and warranty options, then a clean, efficient install. Most homes are completed within 1 to 2 days.</p>
     </div>
     <div class="service-card" id="repairs">
       <h2>Roof repairs</h2>
-      <p>Leaks, wind damage, worn shingles, flashing, and more, fixed quickly and guaranteed leak-free for a minimum of 2 years.</p>
+      <p>Leaks, wind damage, worn shingles, flashing, and more, fixed quickly and guaranteed leak-free for 2 years.</p>
     </div>
     <div class="service-card" id="metal">
       <h2>Standing seam metal roofs</h2>
@@ -171,7 +172,7 @@ pages["services.html"] = page(
     </div>
     <div class="service-card" id="inspections">
       <h2>Roof inspections</h2>
-      <p>Free, honest drone inspections that document your roof's condition from every angle and give you a straightforward recommendation.</p>
+      <p>Free, comprehensive 50-point and drone inspections covering deck to drip edge, documented with photos, with a straightforward recommendation.</p>
     </div>
     <div class="service-card" id="certifications">
       <h2>Roof certifications</h2>
@@ -208,7 +209,7 @@ pages["storm-insurance.html"] = page(
         <h2>Local, honest, and fast</h2>
         <p>After a storm, out-of-town crews flood Central Texas. We're the opposite: family-owned, based in East Austin since 2009, and still here long after the storm season ends. Texas homeowners generally have 2 years to file a storm claim, so even older damage may still be covered.</p>
         <div class="storm-actions">
-          <a class="btn btn-cream" href="tel:15125227310">Call (512) 522-7310</a>
+          <a class="btn btn-cream" href="tel:15127778295">Call (512) 777-8295</a>
           <span class="note">Response within 24&ndash;48 hours</span>
         </div>
       </div>
@@ -217,7 +218,7 @@ pages["storm-insurance.html"] = page(
       </div>
     </div>
     <div class="steps">
-      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>We inspect</h3><p>Free drone hail assessment with photo documentation of every issue we find.</p></div></div>
+      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>We inspect</h3><p>Free 50-point and drone hail assessment with photo documentation of every issue we find.</p></div></div>
       <div class="step"><span class="step-num" aria-hidden="true">2</span><div><h3>We handle the claim</h3><p>We meet your insurance adjuster on site and manage the paperwork end to end.</p></div></div>
       <div class="step"><span class="step-num" aria-hidden="true">3</span><div><h3>We restore</h3><p>Most roofs are completed in one day, guaranteed leak-free, with the yard swept clean.</p></div></div>
     </div>
@@ -225,7 +226,7 @@ pages["storm-insurance.html"] = page(
       <span class="work-icon" aria-hidden="true">&#128737;</span>
       <div>
         <h3>The kid-safe yard guarantee</h3>
-        <p>We sweep every lawn with a metal detector before we leave. Ninety minutes finding stray nails is normal for us. Your kids play out there.</p>
+        <p>We sweep every lawn with a metal detector broom before we leave. Ninety minutes finding stray nails is normal for us. Your kids play out there.</p>
       </div>
     </div>
   </div>
@@ -279,7 +280,7 @@ pages["our-crew.html"] = page(
       <div class="work-card">
         <span class="work-icon" aria-hidden="true">&#9878;</span>
         <h3>We stand behind our work</h3>
-        <p>Repairs are guaranteed leak-free for 2 years, with warranty visits normally within 48 hours.</p>
+        <p>Replacements carry a 10-year workmanship warranty, with warranty visits normally within 48 hours.</p>
       </div>
     </div>
     <div class="guarantee">
@@ -336,7 +337,7 @@ pages["gallery.html"] = page(
 pages["contact.html"] = page(
     "/contact",
     "Contact Hermes Roofing | Free Roof Inspections in Austin, TX",
-    "Get a free roof inspection from Hermes Roofing Company. Call (512) 522-7310 or send a message. Serving Austin, Georgetown, Round Rock, Driftwood, and Central Texas.",
+    "Get a free roof inspection from Hermes Roofing Company. Call (512) 777-8295 or send a message. Serving Austin, Georgetown, Round Rock, Driftwood, and Central Texas.",
     """
 <section class="page-hero">
   <div class="wrap">
@@ -348,7 +349,7 @@ pages["contact.html"] = page(
   <div class="wrap contact-grid">
     <div>
       <ul class="contact-list">
-        <li><strong>Phone</strong><a href="tel:15125227310">(512) 522-7310</a></li>
+        <li><strong>Phone</strong><a href="tel:15127778295">(512) 777-8295</a></li>
         <li><strong>Email</strong><a href="mailto:peter@hermesrenovations.com">peter@hermesrenovations.com</a></li>
         <li><strong>Address</strong><a href="https://maps.app.goo.gl/3Mt3FMg3XMXFxuTL6" rel="noopener" target="_blank">701 Tillery St Ste 12, Austin, TX 78702</a></li>
         <li><strong>Hours</strong>Mon&ndash;Sat 7am&ndash;5pm &middot; Closed Sunday</li>
@@ -399,7 +400,7 @@ for slug, (city, blurb) in CITIES.items():
   "@type": "RoofingContractor",
   "name": "Hermes Roofing Company",
   "url": "{SITE}/service-areas/{slug}",
-  "telephone": "+1-512-522-7310",
+  "telephone": "+1-512-777-8295",
   "address": {{"@type": "PostalAddress", "streetAddress": "701 Tillery St Ste 12", "addressLocality": "Austin", "addressRegion": "TX", "postalCode": "78702", "addressCountry": "US"}},
   "areaServed": "{city}, TX"
 }}
@@ -407,7 +408,7 @@ for slug, (city, blurb) in CITIES.items():
     pages[f"service-areas/{slug}.html"] = page(
         f"/service-areas/{slug}",
         f"Roof Repair & Replacement in {city}, TX | Hermes Roofing Company",
-        f"5-star rated roof repair, replacement, and hail damage restoration in {city}, TX. Family-owned since 2009, A+ BBB accredited, free inspections. Call (512) 522-7310.",
+        f"5-star rated roof repair, replacement, and hail damage restoration in {city}, TX. Family-owned since 2009, A+ BBB accredited, free inspections. Call (512) 777-8295.",
         f"""
 <section class="page-hero">
   <div class="wrap">
@@ -420,7 +421,7 @@ for slug, (city, blurb) in CITIES.items():
   <div class="wrap service-grid">
     <div class="service-card">
       <h2>Roofing services in {city}</h2>
-      <p>Roof repairs, full replacements, new construction, standing seam metal roofs, inspections, certifications, and preventive maintenance, all backed by our 2-year leak-free guarantee.</p>
+      <p>Roof repairs, full replacements, new construction, standing seam metal roofs, inspections, certifications, and preventive maintenance, all backed by our 10-year workmanship warranty.</p>
     </div>
     <div class="service-card">
       <h2>Hail &amp; storm restoration</h2>
@@ -431,8 +432,8 @@ for slug, (city, blurb) in CITIES.items():
       <p>Family-owned since 2009, insured and bonded, A+ BBB accredited, and 5-star rated. A local crew you can reach by phone, not a storm chaser passing through.</p>
     </div>
     <div class="service-card">
-      <h2>Free drone inspections</h2>
-      <p>An honest drone-documented look at your roof's condition and a clear recommendation, with no pressure either way. <a href="/contact">Schedule yours</a> or call <a href="tel:15125227310">(512) 522-7310</a>.</p>
+      <h2>Free 50-point and drone inspections</h2>
+      <p>An honest 50-point and drone, photo-documented look at your roof's condition and a clear recommendation, with no pressure either way. <a href="/contact">Schedule yours</a> or call <a href="tel:15127778295">(512) 777-8295</a>.</p>
     </div>
   </div>
 </section>
