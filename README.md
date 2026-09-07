@@ -102,6 +102,10 @@ Drop the real pair in with those exact names and the slider appears automaticall
 
 Each `.jpg` has `.webp` and `-480.webp` variants used via `<picture>` on the homepage and gallery. When swapping a photo, regenerate its variants (any converter, or Pillow: quality ~80 full size, ~78 at 640px wide).
 
+## Service-area map
+
+The contact page map uses Leaflet with CARTO's light basemap (free, no API key, attribution included). The service area is a 165 km (about two-hour drive) circle around East Austin with every served city marked. To switch to Google Maps branding later, enable "Maps JavaScript API" on the same Google Cloud project as the reviews key and swap the tile layer; the city list and geometry stay the same.
+
 ## Pre-launch checklist
 
 - [ ] Set `GOOGLE_PLACES_API_KEY` and `GOOGLE_PLACE_ID` in Vercel (or fill + unlock the fallback file with verbatim reviews)

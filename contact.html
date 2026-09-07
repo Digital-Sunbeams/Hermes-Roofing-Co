@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="stylesheet" href="/css/styles.css">
 <meta property="og:title" content="Contact Hermes Roofing | Free Roof Inspections in Austin, TX">
 <meta property="og:description" content="Get a free roof inspection from Hermes Roofing Company. Call (512) 777-8295 or send a message. Serving Austin, Georgetown, Round Rock, Driftwood, and Central Texas.">
@@ -100,28 +101,11 @@
   </div>
 </section>
 
-<section class="section reveal" style="padding-top:0">
+<section class="section" style="padding-top:0">
   <div class="wrap">
     <h2 id="where-we-work" style="margin-bottom:16px">Where we work</h2>
-    <div style="background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; display:grid; grid-template-columns: 1.1fr 1fr; gap:20px; align-items:center">
-      <svg viewBox="0 0 100 100" role="img" aria-label="Map of Texas highlighting the Central Texas service area around Austin" style="width:100%; height:auto">
-        <path d="M30 3 L46 3 L46 34 L60 35 L66 30 L74 33 L83 32 L97 34 L88 44 L86 57 L78 63 L72 76 L60 82 L54 97 L46 88 L36 86 L28 74 L16 62 L8 55 L20 47 L27 41 L30 34 Z" fill="var(--cream-deep)" stroke="var(--tan-soft)" stroke-width="1.2" stroke-linejoin="round"/>
-        <circle cx="55" cy="60" r="14" fill="var(--green-pale)" opacity="0.55"/>
-        <circle cx="55" cy="60" r="14" fill="none" stroke="var(--green)" stroke-width="1" stroke-dasharray="2 2"/>
-        <circle cx="55" cy="61" r="2.2" fill="var(--green)"/><text x="58" y="64" font-size="4.6" fill="var(--ink)" font-family="sans-serif" font-weight="600">Austin</text>
-        <circle cx="53" cy="54" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="56" cy="56" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="51" cy="63" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="49" cy="57" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="52" cy="51" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="47" cy="72" r="2" fill="var(--green-mid)"/><text x="50" y="75" font-size="4.2" fill="var(--ink-soft)" font-family="sans-serif">San Antonio</text>
-        <circle cx="63" cy="37" r="2" fill="var(--green-mid)"/><text x="66" y="40" font-size="4.2" fill="var(--ink-soft)" font-family="sans-serif">Dallas</text>
-        <circle cx="60" cy="46" r="1.6" fill="var(--green-mid)"/><text x="62.5" y="48" font-size="3.6" fill="var(--ink-soft)" font-family="sans-serif">Waco</text>
-        <circle cx="44" cy="61" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="52" cy="67" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="50" cy="69" r="1.4" fill="var(--green-mid)"/>
-        <circle cx="60" cy="62" r="1.4" fill="var(--green-mid)"/>
-      </svg>
+    <div class="svc-card">
+      <div id="service-map" role="region" aria-label="Interactive map of the Central Texas service area around Austin"></div>
       <div>
         <p style="color:var(--ink-soft); margin-bottom:10px">Based in East Austin, serving all of Central Texas within about two hours of home:</p>
         <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:8px"><strong>Austin metro:</strong> Austin, Round Rock, Georgetown, Cedar Park, Leander, Pflugerville, Hutto, Taylor, Lakeway, Bee Cave, Buda, Kyle, San Marcos, Bastrop, Elgin</p>
@@ -133,6 +117,46 @@
     </div>
   </div>
 </section>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+<script>
+window.addEventListener('load', function () {
+  if (!window.L || !document.getElementById('service-map')) return;
+  var map = L.map('service-map', { scrollWheelZoom: false, zoomControl: true });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO', subdomains: 'abcd', maxZoom: 18
+  }).addTo(map);
+
+  var austin = [30.2672, -97.7431];
+  L.circle(austin, { radius: 165000, color: '#1E4D36', weight: 2, dashArray: '6 6', fillColor: '#2A5C42', fillOpacity: 0.13 }).addTo(map);
+
+  var cities = [
+    ['Round Rock', 30.5083, -97.6789], ['Georgetown', 30.6333, -97.6779], ['Cedar Park', 30.5052, -97.8203],
+    ['Leander', 30.5788, -97.8530], ['Pflugerville', 30.4394, -97.6200], ['Hutto', 30.5427, -97.5467],
+    ['Taylor', 30.5708, -97.4094], ['Lakeway', 30.3641, -97.9797], ['Bee Cave', 30.3088, -97.9553],
+    ['Buda', 30.0852, -97.8403], ['Kyle', 29.9891, -97.8772], ['San Marcos', 29.8833, -97.9414],
+    ['Bastrop', 30.1105, -97.3153], ['Elgin', 30.3494, -97.3703], ['Driftwood', 30.1197, -98.0025],
+    ['Dripping Springs', 30.1902, -98.0867], ['Wimberley', 29.9974, -98.0986], ['Marble Falls', 30.5782, -98.2728],
+    ['Burnet', 30.7582, -98.2284], ['Spicewood', 30.4766, -98.1547], ['Johnson City', 30.2766, -98.4117],
+    ['Fredericksburg', 30.2752, -98.8720], ['Temple', 31.0982, -97.3428], ['Belton', 31.0560, -97.4642],
+    ['Killeen', 31.1171, -97.7278], ['Salado', 30.9477, -97.5386], ['Waco', 31.5493, -97.1467],
+    ['New Braunfels', 29.7030, -98.1245], ['San Antonio', 29.4241, -98.4936]
+  ];
+  var labeled = { 'San Antonio': 'left', 'Waco': 'right', 'Temple': 'right', 'Killeen': 'left', 'Fredericksburg': 'left', 'Georgetown': 'right', 'Driftwood': 'left', 'Marble Falls': 'left', 'Bastrop': 'right' };
+  var pts = [austin];
+  cities.forEach(function (c) {
+    var m = L.circleMarker([c[1], c[2]], { radius: 5, color: '#FAF6ED', weight: 1.5, fillColor: '#1E4D36', fillOpacity: 1 }).addTo(map);
+    m.bindTooltip(c[0], { permanent: !!labeled[c[0]], direction: labeled[c[0]] || 'top', className: 'svc-tip', offset: [0, 0] });
+    pts.push([c[1], c[2]]);
+  });
+  L.circleMarker(austin, { radius: 9, color: '#FAF6ED', weight: 2, fillColor: '#1E4D36', fillOpacity: 1 }).addTo(map)
+    .bindTooltip('Austin (home base)', { permanent: true, direction: 'right', className: 'svc-tip hq', offset: [6, 0] });
+  var dallas = [32.7767, -96.7970];
+  L.circleMarker(dallas, { radius: 6, color: '#1E4D36', weight: 2, fillColor: '#FAF6ED', fillOpacity: 1 }).addTo(map)
+    .bindTooltip('Dallas (larger projects)', { permanent: true, direction: 'right', className: 'svc-tip', offset: [4, 0] });
+  pts.push(dallas);
+  map.fitBounds(L.latLngBounds(pts), { padding: [28, 28] });
+});
+</script>
 </main>
 
 <footer class="site-footer">
