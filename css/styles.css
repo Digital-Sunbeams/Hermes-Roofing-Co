@@ -329,7 +329,10 @@ form .btn { margin-top: 16px; }
 .hero-full::before { content: ""; position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse 66% 82% at 28% 60%, rgba(18,31,22,0.62) 0%, rgba(18,31,22,0.34) 52%, rgba(18,31,22,0) 78%), linear-gradient(100deg, rgba(18,31,22,0.72) 0%, rgba(18,31,22,0.38) 52%, rgba(18,31,22,0.04) 80%); }
 .hero-full::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(18,31,22,0.82) 0%, rgba(18,31,22,0.36) 42%, rgba(18,31,22,0.04) 70%); }
 .hero-inner { position: relative; z-index: 2; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 22px 54px; }
-.hero-tags { position: relative; z-index: 2; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 22px 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.hero-tags { position: relative; z-index: 2; width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 44px 22px 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+@media (min-width: 1300px) {
+  .hero-mark { position: absolute; left: -110px; top: 30px; margin-right: 0; }
+}
 .hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
 .hero-badge { background: var(--green); color: #FFFDF6; border: 2px solid var(--cream); font-size: 0.9rem; font-weight: 600; padding: 7px 16px; border-radius: 99px; }
 .hero-badge .star { color: var(--gold); }
