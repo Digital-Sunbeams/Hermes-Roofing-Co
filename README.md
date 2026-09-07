@@ -81,7 +81,7 @@ The site now leads with "free 50-point roof inspections" (hands-on, with drone i
 
 ## Booking page (/book)
 
-`/book` is the QR-code target for postcards. Create a free Calendly event type ("Free 50-Point Roof Inspection", 60 min), then in book.html replace YOUR_CALENDLY_URL with your Calendly link path. Point postcard QR codes at hermesroofing.com/book?utm_source=postcard so you can track scans in analytics.
+`/book` is the QR-code target for postcards. Create a free Calendly event type ("Free 50-Point Roof Inspection", 60 min), then in book.html replace YOUR_CALENDLY_URL with your Calendly link path. Point postcard QR codes at hermesroofingco.com/book?utm_source=postcard so you can track scans in analytics.
 
 ## Certification badges
 
@@ -106,6 +106,6 @@ Each `.jpg` has `.webp` and `-480.webp` variants used via `<picture>` on the hom
 
 - [ ] Set `GOOGLE_PLACES_API_KEY` and `GOOGLE_PLACE_ID` in Vercel (or fill + unlock the fallback file with verbatim reviews)
 - [ ] Replace `YOUR_FORM_ID` in contact.html with a real Formspree ID
-- [ ] Update the canonical domain in pages + sitemap if not using hermesroofing.com
+- [ ] Update the canonical domain in pages + sitemap if not using hermesroofingco.com
 - [ ] Confirm the phone number (512-522-7310) and address are the canonical NAP everywhere
 - [ ] Point Google Business Profile's website field at the new domain

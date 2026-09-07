@@ -7,7 +7,7 @@ Run: python3 build_pages.py  (outputs static HTML into the repo; commit the resu
 
 import html
 
-SITE = "https://hermesroofing.com"
+SITE = "https://hermesroofingco.com"
 
 HEAD = """<!DOCTYPE html>
 <html lang="en">
