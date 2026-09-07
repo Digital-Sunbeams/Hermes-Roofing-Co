@@ -435,7 +435,10 @@ form .btn { margin-top: 16px; }
   .hero-full img { position: absolute; inset: 0; object-position: 50% 55%; }
   .hero-full picture::before, .hero-full picture::after { display: none; }
   .hero-inner { background: var(--green); padding: 24px 22px 28px; }
-  .hero-tags { padding: 16px 22px; gap: 8px; background: var(--green); }
+  .hero-tags { padding: 16px 22px; gap: 10px; background: var(--green); align-items: center; }
+  .hero-mark { order: 1; }
+  .hero-badge { order: 2; }
+  .hero-badge.featured { order: 3; font-size: 0.9rem; font-weight: 600; padding: 7px 16px; }
   .hero-badge { background: var(--green); color: #FFFDF6; border: 2px solid var(--cream); }
   .hero-full h1 { max-width: none; }
   .hero-full .hero-sub { color: var(--green-pale); }
@@ -456,7 +459,7 @@ form .btn { margin-top: 16px; }
   .hero-badge { font-size: 0.8rem; padding: 6px 12px; }
   .hero-actions { flex-direction: column; gap: 10px; }
   .hero-actions .btn { width: 100%; }
-  .hero-mark { width: 60px; height: 60px; }
+  .hero-mark { width: 64px; height: 64px; }
 
   /* Stats: clean 2x2 */
   .stats-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 12px; padding: 18px 0 14px; }
