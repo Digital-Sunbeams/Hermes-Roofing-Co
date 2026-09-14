@@ -442,7 +442,6 @@ form .btn { margin-top: 16px; }
   .hero-badge { background: var(--green); color: #FFFDF6; border: 2px solid var(--cream); font-size: 1.02rem; font-weight: 700; padding: 9px 18px; }
   .hero-full h1 { max-width: none; }
   .hero-full .hero-sub { color: var(--green-pale); }
-  .hero-badge { background: var(--green-mid); }
 }
 
 @media (max-width: 640px) {
@@ -456,7 +455,7 @@ form .btn { margin-top: 16px; }
   .reviews-cta .btn { width: 100%; }
   .hero-full .hero-sub { font-size: 1.02rem; margin-bottom: 20px; }
   .hero-badges { gap: 8px; margin-bottom: 14px; }
-  .hero-badge { font-size: 0.8rem; padding: 6px 12px; }
+  .hero-badge { font-size: 1.02rem; font-weight: 700; padding: 9px 18px; }
   .hero-actions { flex-direction: column; gap: 10px; }
   .hero-actions .btn { width: 100%; }
   .hero-mark { width: 64px; height: 64px; }

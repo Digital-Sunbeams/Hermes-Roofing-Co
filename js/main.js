@@ -73,6 +73,7 @@ function toArr(list) { return Array.prototype.slice.call(list); }
 
     // Featured pick: metal detector story > crew mention > longest review.
     var featured =
+      reviews.find(function (r) { return r.featured === true; }) ||
       reviews.find(function (r) { return /metal detector/i.test(r.text); }) ||
       reviews.find(function (r) { return mentionsCrew(r.text); }) ||
       reviews.slice().sort(function (a, b) { return (b.text || '').length - (a.text || '').length; })[0];

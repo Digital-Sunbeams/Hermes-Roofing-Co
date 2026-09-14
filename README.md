@@ -10,7 +10,18 @@ Static site for Hermes Roofing Company (Austin, TX), built for Git + Vercel with
 
 `vercel.json` enables clean URLs (`/services` instead of `/services.html`).
 
-## Live Google reviews setup
+## Live Google reviews: Business Profile API (all reviews, curated)
+
+This is the preferred source. It uses the owner's Google account to pull every review.
+1. Google Cloud Console: create a project, enable "My Business Account Management API" and "My Business Business Information API".
+2. Request Business Profile API access (developers.google.com/my-business/content/prereqs, "request access"). Approval typically takes days to two weeks.
+3. OAuth consent screen: External, app name "Hermes Roofing Website", scope https://www.googleapis.com/auth/business.manage, then Publish (production) so the refresh token never expires.
+4. Credentials: OAuth client ID, type Web application, redirect URIs: https://YOURDOMAIN/api/google-auth (add the vercel.app URL too).
+5. Vercel env: GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET. Redeploy.
+6. Visit https://YOURDOMAIN/api/google-auth, sign in with the business account, approve, copy the refresh token into Vercel as GOOGLE_OAUTH_REFRESH_TOKEN. Redeploy.
+7. Check /api/reviews: "source":"gbp" means it's live. Curate in data/reviews-config.js (minRating, maxReviews, hide[], feature[] using the review ids shown in /api/reviews).
+
+## Live Google reviews: Places API (fallback, max 5 reviews)
 
 The homepage reviews section pulls live data from the business's Google Business Profile through `api/reviews.js`. To enable it:
 

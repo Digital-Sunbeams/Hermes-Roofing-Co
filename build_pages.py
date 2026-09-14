@@ -45,7 +45,7 @@ HEAD = """<!DOCTYPE html>
       <a href="/#faq">FAQ</a>
       <a href="/guides">Guides</a>
       <a href="/contact"{cur_contact}>Contact</a>
-      <a class="nav-phone" href="tel:15127778295">(512) 777-8295</a>
+      <a class="nav-phone" href="tel:15125227310">(512) 522-7310</a>
       <a class="btn btn-solid" href="/contact">Book my free inspection</a>
     </nav>
   </div>
@@ -77,8 +77,8 @@ FOOT = """</main>
       <div>
         <h3>Contact</h3>
         <ul>
-          <li><a href="tel:15127778295">(512) 777-8295</a></li>
-          <li><a href="mailto:peter@hermesrenovations.com">peter@hermesrenovations.com</a></li>
+          <li><a href="tel:15125227310">(512) 522-7310</a></li>
+          <li><a href="mailto:jesse@hermesrenovations.com">jesse@hermesrenovations.com</a></li>
           <li><a href="https://maps.app.goo.gl/3Mt3FMg3XMXFxuTL6" rel="noopener" target="_blank">701 Tillery St Ste 12, Austin, TX 78702</a></li>
           <li>Mon&ndash;Sat 7am&ndash;5pm</li>
         </ul>
@@ -98,7 +98,7 @@ FOOT = """</main>
     <div class="trust-item trust-summary"><span class="big">A+ BBB &middot; 5.0 &#9733; &middot; 17 yrs</span><span class="small">10-year warranty</span></div>
     <div class="trust-item"><span class="big">17 yrs</span><span class="small">in Central Texas</span></div>
     <div class="trust-item"><span class="big">10-yr</span><span class="small">warranty</span></div>
-    <a class="trust-call" href="tel:15127778295">Call now</a>
+    <a class="trust-call" href="tel:15125227310">Call now</a>
   </div>
 </div>
 
@@ -209,7 +209,7 @@ pages["storm-insurance.html"] = page(
         <h2>Local, honest, and fast</h2>
         <p>After a storm, out-of-town crews flood Central Texas. We're the opposite: family-owned, based in East Austin since 2009, and still here long after the storm season ends. Texas homeowners generally have 2 years to file a storm claim, so even older damage may still be covered.</p>
         <div class="storm-actions">
-          <a class="btn btn-cream" href="tel:15127778295">Call (512) 777-8295</a>
+          <a class="btn btn-cream" href="tel:15125227310">Call (512) 522-7310</a>
           <span class="note">Response within 24&ndash;48 hours</span>
         </div>
       </div>
@@ -337,7 +337,7 @@ pages["gallery.html"] = page(
 pages["contact.html"] = page(
     "/contact",
     "Contact Hermes Roofing | Free Roof Inspections in Austin, TX",
-    "Get a free roof inspection from Hermes Roofing Company. Call (512) 777-8295 or send a message. Serving Austin, Georgetown, Round Rock, Driftwood, and Central Texas.",
+    "Get a free roof inspection from Hermes Roofing Company. Call (512) 522-7310 or send a message. Serving Austin, Georgetown, Round Rock, Driftwood, and Central Texas.",
     """
 <section class="page-hero">
   <div class="wrap">
@@ -349,8 +349,8 @@ pages["contact.html"] = page(
   <div class="wrap contact-grid">
     <div>
       <ul class="contact-list">
-        <li><strong>Phone</strong><a href="tel:15127778295">(512) 777-8295</a></li>
-        <li><strong>Email</strong><a href="mailto:peter@hermesrenovations.com">peter@hermesrenovations.com</a></li>
+        <li><strong>Phone</strong><a href="tel:15125227310">(512) 522-7310</a></li>
+        <li><strong>Email</strong><a href="mailto:jesse@hermesrenovations.com">jesse@hermesrenovations.com</a></li>
         <li><strong>Address</strong><a href="https://maps.app.goo.gl/3Mt3FMg3XMXFxuTL6" rel="noopener" target="_blank">701 Tillery St Ste 12, Austin, TX 78702</a></li>
         <li><strong>Hours</strong>Mon&ndash;Sat 7am&ndash;5pm &middot; Closed Sunday</li>
       </ul>
@@ -400,7 +400,7 @@ for slug, (city, blurb) in CITIES.items():
   "@type": "RoofingContractor",
   "name": "Hermes Roofing Company",
   "url": "{SITE}/service-areas/{slug}",
-  "telephone": "+1-512-777-8295",
+  "telephone": "+1-512-522-7310",
   "address": {{"@type": "PostalAddress", "streetAddress": "701 Tillery St Ste 12", "addressLocality": "Austin", "addressRegion": "TX", "postalCode": "78702", "addressCountry": "US"}},
   "areaServed": "{city}, TX"
 }}
@@ -408,7 +408,7 @@ for slug, (city, blurb) in CITIES.items():
     pages[f"service-areas/{slug}.html"] = page(
         f"/service-areas/{slug}",
         f"Roof Repair & Replacement in {city}, TX | Hermes Roofing Company",
-        f"5-star rated roof repair, replacement, and hail damage restoration in {city}, TX. Family-owned since 2009, A+ BBB accredited, free inspections. Call (512) 777-8295.",
+        f"5-star rated roof repair, replacement, and hail damage restoration in {city}, TX. Family-owned since 2009, A+ BBB accredited, free inspections. Call (512) 522-7310.",
         f"""
 <section class="page-hero">
   <div class="wrap">
@@ -433,7 +433,7 @@ for slug, (city, blurb) in CITIES.items():
     </div>
     <div class="service-card">
       <h2>Free 50-point and drone inspections</h2>
-      <p>An honest 50-point and drone, photo-documented look at your roof's condition and a clear recommendation, with no pressure either way. <a href="/contact">Schedule yours</a> or call <a href="tel:15127778295">(512) 777-8295</a>.</p>
+      <p>An honest 50-point and drone, photo-documented look at your roof's condition and a clear recommendation, with no pressure either way. <a href="/contact">Schedule yours</a> or call <a href="tel:15125227310">(512) 522-7310</a>.</p>
     </div>
   </div>
 </section>
